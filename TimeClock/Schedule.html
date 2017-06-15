@@ -1,0 +1,25 @@
+﻿<div style="width: 100%; height: 40%; float: right; margin-top: 5%">
+    <div style="text-align: center; margin-top: 10px; background: #80817F; border-radius: 10px;">
+        <br />
+        <button class="button" ng-click="TableLoad(); ShowDetails=true; month=false">Show schedule</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="Search by month..." class="input nav nav-tabs" id="searchInput" type="text" ng-model="search" ng-change="filter()"  />
+        <br />
+        <br />
+    </div>
+    
+        <table border="1" style="width: 84%; text-align: center" ng-if="ShowDetails==true">
+            <tr>
+                <th >date</th>
+                <th>Time</th>
+                <th>status</th>
+            </tr>
+            <tr ng-repeat="item in ezArr">
+
+                <td class="td">{{item.date|date:"dd/MM/yyyy"}}</td>
+                <td class="td">{{item.Time|date:'hh:mm'}}</td>
+                <td class="td">{{item.status}}</td>
+            </tr>
+        </table>
+        <h2 ng-if="ShowDetails==true">&nbsp;&nbsp;&nbsp;Summary hours: {{hoursSummary}} hours</h2>
+
+</div>

@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "Style/StyleSheet1.css",
+    "inputFile": "Style/StyleSheet1.scss"
+  },
+  {
+    "outputFile": "Style/clockStyle.css",
+    "inputFile": "Style/clockStyle.scss"
+  },
+  {
+    "outputFile": "Style/clockStyle1.css",
+    "inputFile": "Style/clockStyle1.scss"
+  },
+  {
+    "outputFile": "Style/clockStyle2.css",
+    "inputFile": "Style/clockStyle2.scss"
+  },
+  {
+    "outputFile": "Style/demo.css",
+    "inputFile": "Style/demo.scss"
+  }
+]
