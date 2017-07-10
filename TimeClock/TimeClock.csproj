@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TimeClock</RootNamespace>
     <AssemblyName>TimeClock</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,100 +101,86 @@
       <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\license.txt" />
+    <Content Include="core\homePage\homePage.css">
+      <DependentUpon>homePage.scss</DependentUpon>
+    </Content>
+    <Content Include="core\homePage\homePage.min.css">
+      <DependentUpon>homePage.css</DependentUpon>
+    </Content>
+    <Content Include="core\homePage\homePageCtrl.js" />
+    <Content Include="core\index.css">
+      <DependentUpon>index.scss</DependentUpon>
+    </Content>
+    <Content Include="core\index.min.css">
+      <DependentUpon>index.css</DependentUpon>
+    </Content>
+    <Content Include="core\login\login.css">
+      <DependentUpon>login.scss</DependentUpon>
+    </Content>
+    <Content Include="core\login\login.min.css">
+      <DependentUpon>login.css</DependentUpon>
+    </Content>
+    <Content Include="core\schedule\schedule.css">
+      <DependentUpon>schedule.scss</DependentUpon>
+    </Content>
+    <Content Include="core\schedule\schedule.min.css">
+      <DependentUpon>schedule.css</DependentUpon>
+    </Content>
+    <Content Include="core\schedule\scheduleCtrl.js" />
+    <Content Include="shared\fonts\license.txt" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="png\clock.png" />
-    <Content Include="png\contract.png" />
-    <Content Include="png\down-arrow.png" />
-    <Content Include="png\equalizer.png" />
-    <Content Include="png\flag.png" />
-    <Content Include="png\glass.png" />
-    <Content Include="png\hamburger.png" />
-    <Content Include="png\hourglass.png" />
-    <Content Include="png\icons.png" />
-    <Content Include="png\mail.png" />
-    <Content Include="png\maximize.png" />
-    <Content Include="png\monitor.png" />
-    <Content Include="png\nav-left-arrow.png" />
-    <Content Include="png\nav-up-arrow.png" />
-    <Content Include="png\padlock.png" />
-    <Content Include="png\play.png" />
-    <Content Include="png\plus.png" />
-    <Content Include="png\right-arrow.png" />
-    <Content Include="png\smiley.png" />
-    <Content Include="png\trash.png" />
-    <Content Include="png\volume.png" />
-    <Content Include="png\zoom.png" />
-    <Content Include="Scripts\app.js" />
-    <Content Include="Style\bootstrap-theme.css.map" />
-    <Content Include="Style\bootstrap.css.map" />
-    <Content Include="Style\clockStyle.css">
+    <Content Include="core\app.route.js" />
+    <None Include="core\homePage\homePage.scss" />
+    <None Include="core\index.scss" />
+    <None Include="core\schedule\schedule.scss" />
+    <Content Include="shared\libraries\clockStyle.css">
       <DependentUpon>clockStyle.scss</DependentUpon>
     </Content>
-    <Content Include="Style\clockStyle.min.css">
+    <Content Include="shared\libraries\clockStyle.min.css">
       <DependentUpon>clockStyle.css</DependentUpon>
     </Content>
-    <Content Include="Style\clockStyle.scss" />
-    <Content Include="Style\clockStyle1.css">
-      <DependentUpon>clockStyle1.scss</DependentUpon>
-    </Content>
-    <Content Include="Style\clockStyle1.min.css">
-      <DependentUpon>clockStyle1.css</DependentUpon>
-    </Content>
-    <Content Include="Style\clockStyle2.css">
-      <DependentUpon>clockStyle2.scss</DependentUpon>
-    </Content>
-    <Content Include="Style\clockStyle2.min.css">
-      <DependentUpon>clockStyle2.css</DependentUpon>
-    </Content>
-    <Content Include="Style\clockStyle2.scss" />
-    <Content Include="Style\demo.css">
-      <DependentUpon>demo.scss</DependentUpon>
-    </Content>
-    <Content Include="Style\demo.min.css">
-      <DependentUpon>demo.css</DependentUpon>
-    </Content>
-    <Content Include="Style\demo.scss" />
-    <Content Include="Style\clockStyle1.scss" />
-    <Content Include="fonts\.DS_Store" />
-    <Content Include="fonts\codropsicons.eot" />
-    <Content Include="fonts\codropsicons.ttf" />
-    <Content Include="fonts\codropsicons.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="shared\libraries\clockStyle.scss" />
+    <Content Include="shared\fonts\.DS_Store" />
+    <Content Include="shared\fonts\codropsicons.eot" />
+    <Content Include="shared\fonts\codropsicons.ttf" />
+    <Content Include="shared\fonts\codropsicons.woff" />
+    <Content Include="shared\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="shared\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="shared\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="shared\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="shared\libraries\bootstrap.min.css" />
+    <Content Include="shared\libraries\style\bootstrap-theme.css.map" />
+    <Content Include="shared\libraries\style\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -202,50 +189,48 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HomePage.html" />
-    <Content Include="Index.html" />
-    <Content Include="login.html" />
-    <Content Include="Schedule.html" />
-    <Content Include="Scripts\Controllers\clockCtrl.js" />
-    <Content Include="Scripts\Controllers\loginCtrl.js" />
-    <Content Include="Scripts\Controllers\publicCtrl.js" />
-    <Content Include="Scripts\Directives\timeDir.js" />
-    <Content Include="Scripts\Directives\widgetClockDir.js" />
-    <Content Include="Scripts\Libraries\angular-animate.js" />
-    <Content Include="Scripts\Libraries\angular-chart.js" />
-    <Content Include="Scripts\Libraries\angular-clock.js" />
-    <Content Include="Scripts\Libraries\angular-clock.min.js" />
-    <Content Include="Scripts\Libraries\angular-route.js" />
-    <Content Include="Scripts\Libraries\angular-route.min.js" />
-    <Content Include="Scripts\Libraries\angular.js" />
-    <Content Include="Scripts\Libraries\angular.min.js" />
-    <Content Include="Scripts\Libraries\bootstrap-rtl.min.css" />
-    <Content Include="Scripts\Libraries\bootstrap.min.css" />
-    <Content Include="Scripts\Libraries\bootstrap.min.js" />
-    <Content Include="Scripts\Libraries\Chart.min.js" />
-    <Content Include="Scripts\Libraries\clock.module.js" />
-    <Content Include="Scripts\Libraries\jquery.min.js" />
-    <Content Include="Scripts\Libraries\modernizr.custom.js" />
-    <Content Include="Scripts\Libraries\ngReact.js" />
-    <Content Include="Scripts\Libraries\ngReact.min.js" />
-    <Content Include="Scripts\Libraries\react\react-dom-server.js" />
-    <Content Include="Scripts\Libraries\react\react-dom-server.min.js" />
-    <Content Include="Scripts\Libraries\react\react-dom.js" />
-    <Content Include="Scripts\Libraries\react\react-dom.min.js" />
-    <Content Include="Scripts\Libraries\react\react-with-addons.js" />
-    <Content Include="Scripts\Libraries\react\react-with-addons.min.js" />
-    <Content Include="Scripts\Libraries\react\react.js" />
-    <Content Include="Scripts\Libraries\react\react.min.js" />
-    <Content Include="Scripts\Libraries\ui-bootstrap-tpls-0.10.0.min.js" />
-    <Content Include="Scripts\Libraries\ui-bootstrap-tpls.js" />
-    <Content Include="Style\angular-clock.css" />
-    <Content Include="Style\angular-clock2.css" />
-    <Content Include="Style\bootstrap-theme.css" />
-    <Content Include="Style\bootstrap-theme.min.css" />
-    <Content Include="Style\bootstrap.css" />
-    <Content Include="Style\bootstrap.min.css" />
-    <Content Include="Style\login.css" />
-    <Content Include="TimePickerHtml.html" />
+    <Content Include="core\homePage\homePage.html" />
+    <Content Include="core\index.html" />
+    <Content Include="core\login\login.html" />
+    <Content Include="core\schedule\schedule.html" />
+    <Content Include="core\login\loginCtrl.js" />
+    <Content Include="core\app.mdl.js" />
+    <Content Include="shared\directives\timeDir.js" />
+    <Content Include="shared\directives\widgetClockDir.js" />
+    <Content Include="shared\libraries\angular-animate.js" />
+    <Content Include="shared\libraries\angular-chart.js" />
+    <Content Include="shared\libraries\angular-clock.js" />
+    <Content Include="shared\libraries\angular-clock.min.js" />
+    <Content Include="shared\libraries\angular-route.js" />
+    <Content Include="shared\libraries\angular-route.min.js" />
+    <Content Include="shared\libraries\angular.js" />
+    <Content Include="shared\libraries\angular.min.js" />
+    <Content Include="shared\libraries\bootstrap-rtl.min.css" />
+    <Content Include="shared\libraries\bootstrap.min.js" />
+    <Content Include="shared\libraries\Chart.min.js" />
+    <Content Include="shared\libraries\clock.module.js" />
+    <Content Include="shared\libraries\jquery.min.js" />
+    <Content Include="shared\libraries\modernizr.custom.js" />
+    <Content Include="shared\libraries\ngReact.js" />
+    <Content Include="shared\libraries\ngReact.min.js" />
+    <Content Include="shared\libraries\react\react-dom-server.js" />
+    <Content Include="shared\libraries\react\react-dom-server.min.js" />
+    <Content Include="shared\libraries\react\react-dom.js" />
+    <Content Include="shared\libraries\react\react-dom.min.js" />
+    <Content Include="shared\libraries\react\react-with-addons.js" />
+    <Content Include="shared\libraries\react\react-with-addons.min.js" />
+    <Content Include="shared\libraries\react\react.js" />
+    <Content Include="shared\libraries\react\react.min.js" />
+    <Content Include="shared\libraries\style\bootstrap.min.css" />
+    <Content Include="shared\libraries\ui-bootstrap-tpls-0.10.0.min.js" />
+    <Content Include="shared\libraries\ui-bootstrap-tpls.js" />
+    <None Include="core\login\login.scss" />
+    <Content Include="core\homePage\TimeDirHtml.html" />
+    <Content Include="shared\libraries\style\angular-clock.css" />
+    <Content Include="shared\libraries\style\angular-clock2.css" />
+    <Content Include="shared\libraries\style\bootstrap-theme.css" />
+    <Content Include="shared\libraries\style\bootstrap-theme.min.css" />
+    <Content Include="shared\libraries\style\bootstrap.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
